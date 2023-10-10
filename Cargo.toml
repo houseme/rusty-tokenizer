@@ -1,5 +1,5 @@
 [package]
-name = "RustyTokenizer"
+name = "rusty-tokenizer"
 version = "0.1.0"
 edition = "2021"
 authors = ["houseme<https://github.com/houseme"]
@@ -14,12 +14,12 @@ categories = ["web", "asynchronous", "development-tools", "Text processing", "Na
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-chrono = "0.4.31"
+chrono = { version = "0.4.31" }
 jieba-rs = { version = "0.6", features = ["tfidf", "textrank"] }
 libc = "0.2"
 salvo = { version = "0.57.0" }
 serde = { version = "1.0.188", features = [] }
 tokio = { version = "1", features = ["macros"] }
-tracing = "0.1"
-tracing-subscriber = "0.3"
+tracing = { version = "0.1" }
+tracing-subscriber = { version = "0.3" }
 
