@@ -1,0 +1,25 @@
+[package]
+name = "RustyTokenizer"
+version = "0.1.0"
+edition = "2021"
+authors = ["houseme<https://github.com/houseme"]
+license = "MIT OR Apache-2.0"
+description = "Service Governance Specification."
+homepage = "https://github.com/houseme/RustyTokenizer"
+repository = "https://github.com/houseme/RustyTokenizer.git"
+readme = "README.md"
+keywords = ["Chinese-Tokenizer", "web-services", "web", "segmenation", "processing"]
+categories = ["web", "asynchronous", "development-tools", "Text processing", "Natural Language Processing"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.31"
+jieba-rs = { version = "0.6", features = ["tfidf", "textrank"] }
+libc = "0.2"
+salvo = { version = "0.57.0" }
+serde = { version = "1.0.188", features = [] }
+tokio = { version = "1", features = ["macros"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
