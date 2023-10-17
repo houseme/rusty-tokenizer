@@ -1,5 +1,6 @@
 use chrono::Utc;
 use jieba_rs::Jieba;
+use salvo::logging::Logger;
 use salvo::prelude::*;
 use salvo::IntoVecString;
 use serde::Serialize;
@@ -33,7 +34,7 @@ async fn hello(_req: &mut Request, _depot: &mut Depot, res: &mut Response, _ctrl
 async fn main() {
     tracing_subscriber::fmt().init();
 
-    let router = Router::new().get(hello);
+    let router = Router::new().hoop(Logger::new()).get(hello);
     let acceptor = TcpListener::new("127.0.0.1:5800").bind().await;
     Server::new(acceptor).serve(router).await;
 }
