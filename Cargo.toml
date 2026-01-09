@@ -14,11 +14,11 @@ categories = ["web", "asynchronous", "development-tools", "Text processing", "Na
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-chrono = { version = "0.4.31" }
-jieba-rs = { version = "0.6", features = ["tfidf", "textrank"] }
+chrono = { version = "0.4.42" }
+jieba-rs = { version = "0.8", features = ["tfidf", "textrank"] }
 libc = "0.2"
-salvo = { version = "0.58.0", features = ["logging"] }
-serde = { version = "1.0.188", features = [] }
+salvo = { version = "0.88", features = ["logging"] }
+serde = { version = "1", features = [] }
 tokio = { version = "1", features = ["macros"] }
 tracing = { version = "0.1" }
 tracing-subscriber = { version = "0.3" }
